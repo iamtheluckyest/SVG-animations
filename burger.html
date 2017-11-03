@@ -1,0 +1,167 @@
+<!-- Visit the CSS page for the interesting bits! -->
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+
+    <meta charset="UTF-8">
+    <title>Burger Example!</title>
+
+    <script
+  src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
+    <style>
+    	.animateBurger {
+        	position: relative;
+        	top: 0px;
+        	transition : all .75s;
+
+        }
+        #burger {
+        	display:none;
+        }
+        
+    </style>
+    
+  </head>
+    
+  <body>
+
+    
+    <svg id="burger" xmlns:x="&ns_extend;" xmlns:i="&ns_ai;" xmlns:graph="&ns_graphs;" i:viewOrigin="-28.2046 106.5" i:rulerOrigin="0 0" i:pageBounds="0 36 36 0"
+    	 xmlns="&ns_svg;" xmlns:xlink="&ns_xlink;" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+    	 width="93.41" height="171" viewBox="0 0 93.41 171" overflow="visible" enable-background="new 0 0 93.41 171"
+    	 xml:space="preserve">
+	
+		
+				
+		<polygon class="animateBurger" id="tomato" fill="#F95428" points="84.882,88.053 84.882,109.365 75.685,109.365 54.516,109.365 8.992,109.365 8.992,88.053 "/>
+		<polygon class="animateBurger" id="lettuce" fill="#9AD14B" points="84.882,33.267 84.882,54.066 42.39,54.066 21.221,54.066 8.992,54.066 8.992,33.267 "/>
+		<polygon class="animateBurger" id="tomatoShadow" fill="#E54728" points="16.073,92.246 16.073,105.172 15.215,105.172 13.239,105.172 8.992,105.172 8.992,92.246 "/>
+		<polygon class="animateBurger" id="lettuceShadow" fill="#8BB73D" points="16.073,36.544 16.073,50.154 15.215,50.154 13.239,50.154 8.992,50.154 8.992,36.544 "/>
+		<path class="animateBurger" id="bunBottom" fill="#F7B239" d="M85.578,152.257c2.137,0,3.87,1.73,3.87,3.866v4.717c0,5.61-4.55,10.16-10.163,10.16H14.124
+			c-5.613,0-10.16-4.55-10.16-10.16v-4.717c0-2.136,1.73-3.866,3.866-3.866h0.696l37.324-8.679l39.032,8.68L85.578,152.257
+			L85.578,152.257z"/>
+		<path class="animateBurger" id="bunBottomShadow" fill="#E09B2D" d="M27.414,160.84v-4.717c0-2.136,1.73-3.866,3.867-3.866H8.527H7.831c-2.136,0-3.867,1.73-3.867,3.866
+			v4.717c0,5.61,4.547,10.16,10.16,10.16h23.45C31.961,171,27.414,166.45,27.414,160.84z"/>
+		<path  class="animateBurger" id="bunTop" fill="#F7B239" d="M89.448,25.306c0,2.136-1.733,3.866-3.87,3.866h-0.695H8.992H7.831c-1.068,0-2.036-0.434-2.734-1.132
+			c-0.699-0.699-1.132-1.667-1.132-2.734C3.964,11.331,15.292,0,29.267,0h34.875c6.986,0,13.313,2.832,17.893,7.413
+			C86.616,11.993,89.448,18.319,89.448,25.306z"/>
+		<path class="animateBurger" id="bunTopShadow" fill="#E09B2D" d="M23.649,25.306C23.649,11.331,34.977,0,48.952,0H29.267C15.292,0,3.964,11.331,3.964,25.306
+			c0,1.068,0.434,2.036,1.132,2.734s1.667,1.132,2.734,1.132h1.161h18.524c-1.068,0-2.036-0.434-2.734-1.132
+			C24.083,27.342,23.649,26.374,23.649,25.306z"/>
+		<path class="animateBurger" id="meat2" fill="#B27214" d="M84.882,124.203c2.354,0,4.485,0.955,6.028,2.498c1.544,1.544,2.499,3.675,2.499,6.029
+			c0,4.709-3.818,8.526-8.527,8.526H8.527c-2.354,0-4.485-0.955-6.028-2.498S0,135.084,0,132.73c0-4.709,3.818-8.527,8.527-8.527
+			h0.465h45.524h21.169H84.882z"/>
+		<polygon class="animateBurger" id="cheese2" fill="#F4DE3B" points="75.685,113.203 65.387,124.077 54.516,113.203 "/>
+		<path class="animateBurger" id= "meat1" fill="#B27214" d="M84.882,67.161c2.354,0,4.485,0.955,6.028,2.498c1.544,1.543,2.499,3.674,2.499,6.029
+			c0,4.708-3.818,8.527-8.527,8.527H8.992H8.527c-2.354,0-4.485-0.955-6.028-2.498C0.955,80.174,0,78.042,0,75.688
+			c0-4.709,3.818-8.527,8.527-8.527h0.465H42.39H84.882z"/>
+		<polygon class="animateBurger" id="cheese1" fill="#F4DE3B" points="42.39,56.626 32.094,67.5 21.221,56.626 "/>
+		<path class="animateBurger" id="meatShadow2" fill="#995E10" d="M18.229,132.73c0-4.709,3.818-8.527,8.527-8.527H8.992H8.527c-4.709,0-8.527,3.818-8.527,8.527
+			c0,2.354,0.955,4.485,2.499,6.028c1.543,1.543,3.674,2.498,6.028,2.498h18.229c-2.354,0-4.485-0.955-6.028-2.498
+			S18.229,135.085,18.229,132.73z"/>
+		<path class="animateBurger" id="meatShadow1" fill="#995E10" d="M18.229,75.688c0-3.122,1.679-5.851,4.182-7.336l-1.191-1.19H8.992H8.527
+			C3.818,67.161,0,70.979,0,75.688c0,2.354,0.955,4.486,2.499,6.029c1.543,1.543,3.674,2.498,6.028,2.498h0.465h17.765
+			c-2.354,0-4.486-0.955-6.029-2.498S18.229,78.042,18.229,75.688z"/>
+	
+		<g class="animateBurger" id="seeds" i:knockout="Off" i:layer="yes" i:dimmedPercent="50" i:rgbTrio="#4F00FFFF4F00">
+			<circle class="animateBurger" fill="#F4DE3B" cx="27.828" cy="7.862" r="1.926"/> 
+			<circle class="animateBurger" fill="#F4DE3B" cx="65.582" cy="7.862" r="1.926"/> 
+			<circle class="animateBurger" fill="#F4DE3B" cx="40.414" cy="7.862" r="1.926"/> 
+			<circle class="animateBurger" fill="#F4DE3B" cx="52.998" cy="7.862" r="1.926"/> 
+		</g>
+		
+	</svg>
+
+
+
+    <script>
+        var burgerTransform = {
+    	    
+    	    "bunTop" : {
+    	        closeBurger : "105px",
+    	        openBurger : "rotate(30deg) translate(40px, -20px)"
+    	    },
+    	    "bunTopShadow" : {
+    	        closeBurger : "105px",
+    	        openBurger : "rotate(30deg) translate(40px, -20px)"
+    	    },
+        	"seeds > circle" : {
+        		closeBurger : "105px",
+    	        openBurger : "rotate(30deg) translate(40px, -20px)"
+        	},
+    	    "lettuce" :{
+    	        closeBurger : "95px",
+    	        openBurger : "rotate(25deg) translate(35px, -10px)"
+    	    },
+    	    "lettuceShadow" : {
+    	        closeBurger : "95px",
+    	        openBurger : "rotate(25deg) translate(35px, -10px)"
+    	    },
+        	"cheese1" : {
+        	     closeBurger : "85px",
+    	        openBurger : "rotate(20deg) translate(30px, 0px)"
+        	},
+    	    "meat1" : {
+    	        closeBurger : "75px",
+    	        openBurger : "rotate(10deg) translate(20px, 15px)"
+    	    },
+        	"meatShadow1" : {
+    	        closeBurger : "75px",
+    	        openBurger : "rotate(10deg) translate(20px, 15px)"
+        	},
+        	"tomato" : {
+        		closeBurger : "68px",
+    	        openBurger : "translate(0px, 35px)"
+        	},
+        	"tomatoShadow" : {
+        		closeBurger : "68px",
+    	        openBurger : "translate(0px, 35px)"
+        	},
+        	"cheese2" : {
+        	    closeBurger : "60px",
+    	        openBurger : "translate(0px, 35px)"
+        	},
+        	"meat2" : {
+        	    closeBurger : "49px",
+    	        openBurger : "translate(0px, 35px)"
+        	},
+        	"meatShadow2" : {
+        	    closeBurger : "49px",
+    	        openBurger : "translate(0px, 35px)"
+        	},
+    	    "bunBottom" : {
+    	        closeBurger : "35px",
+    	        openBurger : "translate(0px, 35px)"
+    		},
+    	    "bunBottomShadow" : {
+    	        closeBurger : "35px",
+    	        openBurger : "translate(0px, 35px)"
+    	    }
+        }
+        
+        $(document).ready(function(){
+        	for (var burgerBit in burgerTransform) {
+            	$('#' + burgerBit).css({"-webkit-transform": burgerTransform[burgerBit].openBurger })
+            }
+            $("#burger").css("display", "block")
+        })
+        
+        $("#burger").mouseenter(function() {
+        	for (var burgerBit in burgerTransform) {
+            	$('#' + burgerBit).css({"-webkit-transform":"translate(0px," + burgerTransform[burgerBit].closeBurger + ")"})
+            }
+        })
+        
+        $("#burger").mouseleave(function() {
+        	for (var burgerBit in burgerTransform) {
+            	$('#' + burgerBit).css({"-webkit-transform": burgerTransform[burgerBit].openBurger })
+            }
+        })
+    </script>
+  </body>
+  
+
+</html>
