@@ -2,7 +2,6 @@
 <html lang="en-us">
 
   <head>
-
     <meta charset="UTF-8">
     <title>Burger Example!</title>
 
@@ -17,7 +16,6 @@
         	display:none;
         }
     </style>
-    
   </head>
     
   <body>
@@ -26,8 +24,6 @@
     	 xmlns="&ns_svg;" xmlns:xlink="&ns_xlink;" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
     	 width="93.41" height="171" viewBox="0 0 93.41 171" overflow="visible" enable-background="new 0 0 93.41 171"
     	 xml:space="preserve">
-	
-		
 				
 		<polygon class="animateBurger" id="tomato" fill="#F95428" points="84.882,88.053 84.882,109.365 75.685,109.365 54.516,109.365 8.992,109.365 8.992,88.053 "/>
 		<polygon class="animateBurger" id="lettuce" fill="#9AD14B" points="84.882,33.267 84.882,54.066 42.39,54.066 21.221,54.066 8.992,54.066 8.992,33.267 "/>
@@ -68,9 +64,8 @@
 		
 	</svg>
 
-
-
     <script>
+    	// Object matches selectors of different parts of the burger image and stores their relevant transformation values
         var burgerTransform = {
     	    
     	    "bunTop" : {
@@ -135,6 +130,7 @@
     	    }
         }
         
+        // Gives browser time to perform initial transformations on the burger image before displaying to user
         $(document).ready(function(){
         	for (var burgerBit in burgerTransform) {
             	$('#' + burgerBit).css({"-webkit-transform": burgerTransform[burgerBit].openBurger })
@@ -142,12 +138,14 @@
             $("#burger").css("display", "block")
         })
         
+        // Performs the css translation on each part of the burger corresponding to the value in the burgerTransform object
         $("#burger").mouseenter(function() {
         	for (var burgerBit in burgerTransform) {
             	$('#' + burgerBit).css({"-webkit-transform":"translate(0px," + burgerTransform[burgerBit].closeBurger + ")"})
             }
         })
         
+        // Performs the css translation on each part of the burger corresponding to the value in the burgerTransform object
         $("#burger").mouseleave(function() {
         	for (var burgerBit in burgerTransform) {
             	$('#' + burgerBit).css({"-webkit-transform": burgerTransform[burgerBit].openBurger })
